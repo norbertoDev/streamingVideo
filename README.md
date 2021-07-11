@@ -1,4 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Portafolio de un clone de servicio streaming de video.
+
+## Inicialicamos el proyecto
+
+Para inicializar este proyecto ponemos en curso un nuevo parametro que es --template que nos genera una plantilla redux en nuestra aplicacion react.
+
+` npx create-react-app [project name] --template redux `
+
+Generamos un proceso de limpieza y reestructuracion del projecto a nuestro gusto.
+
+### 1. App.js. generamos el layout inicial.
+
+
+## Dependencies.
+
+    - "@material-ui/core": "^4.12.1",
+    - "@reduxjs/toolkit": "^1.6.0",
+    - "@testing-library/jest-dom": "^4.2.4",
+    - "@testing-library/react": "^9.5.0",
+    - "@testing-library/user-event": "^7.2.1",
+    - "axios": "^0.21.1",
+    - "react": "^17.0.2",
+    - "react-dom": "^17.0.2",
+    - "react-redux": "^7.2.4",
+    - "react-scripts": "4.0.3"
 
 ## Available Scripts
 
