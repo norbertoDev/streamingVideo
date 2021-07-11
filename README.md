@@ -8,7 +8,30 @@ Para inicializar este proyecto ponemos en curso un nuevo parametro que es --temp
 
 Generamos un proceso de limpieza y reestructuracion del projecto a nuestro gusto.
 
-### 1. App.js. generamos el layout inicial.
+## 1. App.js. generamos el layout inicial.
+
+- creamos las rutas.
+- Renderizamos Login o el resto del app condicionado a la existencia de una sesion.
+
+## Estilos.
+
+- Utilizamos userStyles para crear una infraestructura que nos permita asignar estilos a cada uno de los componentes.
+
+## Creamos las carpetas de componentes.
+
+Las carpetas se van a dividir en componentes y pages. para diferenciarlos en el diagrama de flujo aquellos slots de fondo azul son
+componentes que además son paginas y los recuadros marrones son solo componentes que no generan ninguna pagina por si mismo.
+
+## Creamos los estilos de los componentes.
+
+se crea el patron de diseño de los userStyles en todos los componentes tanto para las paginas como los componentes.
+
+## 1. Empezamos a trabajar en el componente header.
+
+
+
+
+
 
 
 ## Dependencies.
@@ -19,10 +42,13 @@ Generamos un proceso de limpieza y reestructuracion del projecto a nuestro gusto
     - "@testing-library/react": "^9.5.0",
     - "@testing-library/user-event": "^7.2.1",
     - "axios": "^0.21.1",
+    - "firebase": "^8.7.1",
     - "react": "^17.0.2",
     - "react-dom": "^17.0.2",
     - "react-redux": "^7.2.4",
-    - "react-scripts": "4.0.3"
+    - "react-scripts": "4.0.3",
+    - "react-uuid": "^1.0.2",
+    - "styled-components": "^5.3.0"
 
 ## Available Scripts
 
