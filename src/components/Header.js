@@ -1,9 +1,11 @@
-import { AppBar, makeStyles, Toolbar } from '@material-ui/core';
+import { AppBar, Avatar, IconButton, makeStyles, Toolbar } from '@material-ui/core';
 import logo from "../images/logoNet.png";
 import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Header = () => {
     const classes = userStyles();
+    const history = useHistory();
     const [show, setShow] = useState(false);
 
     const hideHeader = () => {
@@ -15,13 +17,19 @@ const Header = () => {
     };
 
     useEffect(() => {  
-        window.addEventListener("scroll", hideHeader)
+        window.addEventListener("scroll", hideHeader);
+        return ()=> window.removeEventListener("scroll",hideHeader);
     }, []);
 
     return (
         <AppBar position="sticky" elevation={ 0} className={`${classes.root} ${show && classes.transparent}`}>
-            <Toolbar>
-                <img src={ logo} alt="logo" className={classes.logo}/>
+            <Toolbar className={classes.toolbar}>
+                <IconButton onClick={() => history.push("/")}>
+                    <img src={ logo} alt="logo" className={classes.logo}/>
+                </IconButton>
+                <Avatar variant="square" style={{cursor: "pointer"}} 
+                onClick={history.push("/profile")}
+                />
             </Toolbar>
         </AppBar>
     )
@@ -36,6 +44,11 @@ const userStyles = makeStyles((theme) =>({
     },
     transparent:{
         backgroundColor: "transparent"
+    },
+    toolbar:{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems:"center",
     },
     logo: {
         width: "100px",

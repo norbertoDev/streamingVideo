@@ -28,6 +28,18 @@ se crea el patron de diseño de los userStyles en todos los componentes tanto pa
 
 ## 1. Empezamos a trabajar en el componente header.
 
+hemos importados los logos de la compañia y el avatar. ademas el Header esta compuesto por una AppBar la cual tiene las propieadades de stickybar para que cuando realicemos la scrollbar permanezca en la parte superior de la ventana. además hemos añadidos estilos y generados uno propio de la AppBar el cual por medios de hooks controlamos el estado de la ventana, puesto que cuando realizamos el scroll bajo la barra debe cambiar su fondo de negro a trasparente.
+
+## 2. Continuamos con la clase Banner.
+
+El Banner está compuesto por un div root al que le añadimos como estilos del Material UI una imagen traida a priori de un directorio local hasta la conexión con la API. a parte dentro de la imagen de fondo, el div esta compuesto por dos Typography (que es un  componente de material UI) que contiene el titulo de la pelicula/serie mas una breve sinopsis de la misma. el estilo de la descripcion trataremos con un truncate para que si la sinopsis supera un tamaño de mas de n caracteres trunque la descripcion. a parte tenemos dos botones, un Play y un my list. el baner ademas dispone de un fade bottom que nos sirve para ir oscureciendo la imagen conforme baja el componente.
+
+## 3. Continuamos con el login.
+
+Para el container del login trabajaremos con los styled component, que es un modulo de react que nos permite personalizar los componentes a parte mediante codigo css e importarlo en nuestro proyecto a nuestro gusto.
+
+El Login esta compuesto por un logo en la parte superior izquierda de la pantalla y por un boton customizado a la derecha para iniciar la sesion.
+
 
 
 
