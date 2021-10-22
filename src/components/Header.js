@@ -8,13 +8,13 @@ const Header = () => {
     const history = useHistory();
     const [show, setShow] = useState(false);
 
-    const hideHeader = () => {
-        if(window.scrollY > 100) {
-            setShow(true)
-        }else{
-            setShow(false)
-        }
-    };
+    const hideHeader = () => setShow(window.scrollY > 100);  //hooks 
+       // if(window.scrollY > 100) {
+       //     setShow(true)
+       // }else{
+       //setShow(false)
+       // }
+  
 
     useEffect(() => {  
         window.addEventListener("scroll", hideHeader);
@@ -22,7 +22,7 @@ const Header = () => {
     }, []);
 
     return (
-        <AppBar position="sticky" elevation={ 0} className={`${classes.root} ${show && classes.transparent}`}>
+        <AppBar position="sticky" elevation={0} className={`${classes.root} ${show && classes.transparent}`}>
             <Toolbar className={classes.toolbar}>
                 <IconButton onClick={() => history.push("/")}>
                     <img src={ logo} alt="logo" className={classes.logo}/>

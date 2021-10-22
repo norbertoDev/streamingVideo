@@ -9,19 +9,28 @@ padding: 25.5px;
 height: 30px;
 border-radius:5px;
 border: none;
-
 `
+
+const handleWidth = wide => {
+    switch(wide){
+        case "fullWidth": return "100%"
+        case "medium": return "260px"
+        default: return "160px" 
+    }
+}
 
 export const NetflixButton = styled.button`
 z-index: 15;
-background-color: red;
+background-color: ${(props => props.color === "gray" ? "lightgray" : "red" )};
 color: #fff;
-border-radius:5px;
+border-radius: ${({radius}) => radius === "true" ? "5px" : "0px"};
 text-transform: inherit;
 padding: 15px; 
 font-size: 1.1rem;
 border: none;
 outline: none;
 cursor: pointer;
+width: ${({wide})=> handleWidth(wide)}
+
 
 `

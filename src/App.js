@@ -7,7 +7,7 @@ import Paypal from "./pages/Paypal";
 import Profile from "./pages/Profile";
 
 function App() {
-  const user =null;
+  const user = null;
   const classes = userStyles();
   return (
     <div className={classes.root}>
@@ -15,6 +15,9 @@ function App() {
         {
           !user ? (<Login />) : (
             <Switch>
+              <Route path='/profile'>
+               <Profile/>
+              </Route>
               <Route path='/'>
                 <Home/>
               </Route>
@@ -30,7 +33,7 @@ function App() {
 const userStyles = makeStyles((theme) =>({
   root: {
     backgroundColor: "#111",
-    minHeight: "100vh",
+    minHeight: "100%",
   }, 
 }))
 export default App;

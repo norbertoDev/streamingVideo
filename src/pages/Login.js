@@ -2,14 +2,20 @@ import { Button, makeStyles, Typography } from '@material-ui/core'
 import logo from "../images/logoNet.png";
 import HeroBanner from "../images/HelloBanner.jpg";
 import { NetflixButton, NetflixInput } from '../styled/styledcomponents';
+import { useState } from 'react';
+import SingUp from './SingUp';
 
 const Login = () => {
     const classes = userStyles();
+    const [signIn, setSignIn] = useState(false);
     return (
         <div className={classes.root}>
             <img src={logo} className={classes.logo} alt='logo'/>
             <NetflixButton className= {classes.sesion}>Iniciar sesion </NetflixButton>
             <div className={classes.info}>
+              {
+                !signIn ? (<SingUp/>) : (
+              <>        
               <Typography variant='h4' gutterBottom>
                 Unlimited films, TV shows and more. 
               </Typography>
@@ -23,6 +29,8 @@ const Login = () => {
                   <NetflixInput placeholder= "Email address"/>
                   <NetflixButton>Get Started</NetflixButton>
                 </div>
+                </>
+                )}
             </div>
         </div>
     )
