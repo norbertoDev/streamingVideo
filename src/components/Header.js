@@ -24,12 +24,12 @@ const Header = () => {
     return (
         <AppBar position="sticky" elevation={0} className={`${classes.root} ${show && classes.transparent}`}>
             <Toolbar className={classes.toolbar}>
-                <IconButton onClick={() => history.push("/")}>
+                <IconButton onClick={ () => history.push("/")}>
                     <img src={ logo} alt="logo" className={classes.logo}/>
                 </IconButton>
-                <Avatar variant="square" style={{cursor: "pointer"}} 
-                onClick={history.push("/profile")}
-                />
+                <IconButton onClick = { () => history.push("/profile")}>
+                <Avatar variant="square" style={{cursor: "pointer"}} />
+                </IconButton>
             </Toolbar>
         </AppBar>
     )

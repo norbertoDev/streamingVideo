@@ -5,7 +5,7 @@ import Header from '../components/Header';
 const Home = () => {
     const classes = userStyles();
     return (
-        <div>
+        <div className={classes.root}>
             <Header/>
             <Banner/>
         </div>
@@ -14,7 +14,7 @@ const Home = () => {
 
 const userStyles = makeStyles((theme) =>({
     root: {
-      //backgroundColor: "#111",
+      backgroundColor: "#111",
       minHeight: "100vh",
     }, 
   }))
